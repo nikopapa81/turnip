@@ -1,0 +1,46 @@
+<div class="page-header">
+  <h1>Food items</h1>
+</div>
+
+<p><a href="/food_items/new" class="btn btn-primary">Add a New Food Item</a></p>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Food item</th>
+      <th>Food category</th>
+      <th>Unit of measure</th>
+      <th>Average expiration days</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @food_items.each do |food_item| %>
+      <tr>
+        <td><%= food_item.food_item %></td>
+        <td><%= food_item.food_category_id %></td>
+        <td><%= food_item.unit_of_measure_id %></td>
+        <td><%= food_item.average_expiration_days %></td>
+        <td>
+          <a href="/food_items/<%= food_item.id %>" class="btn btn-primary">
+            <i class="fa fa-search-plus"></i>
+          </a>
+        </td>
+        <td>
+          <a href="/food_items/<%= food_item.id %>/edit" class="btn btn-warning">
+            <i class="fa fa-edit"></i>
+          </a>
+        </td>
+        <td>
+          <a href="/delete_food_item/<%= food_item.id %>" class="btn btn-danger">
+            <i class="fa fa-trash-o"></i>
+          </a>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

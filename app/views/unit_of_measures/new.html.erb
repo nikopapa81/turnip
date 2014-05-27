@@ -1,0 +1,31 @@
+<div class="page-header">
+  <h1>Add Unit Of Measure</h1>
+</div>
+
+<% if @unit_of_measure.errors.any? %>
+  <% @unit_of_measure.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+
+<form action="/create_unit_of_measure" class="form-horizontal">
+  <!-- Label and input for unit_of_measure -->
+  <div class="form-group">
+    <label for="unit_of_measure" class="col-sm-2 control-label">
+      Unit of measure
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="unit_of_measure" name="unit_of_measure" placeholder="Unit of measure" class="form-control" value="<%= @unit_of_measure.unit_of_measure %>">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <input type="submit" value="Create Unit Of Measure" class="btn btn-primary">
+    </div>
+  </div>
+</form>

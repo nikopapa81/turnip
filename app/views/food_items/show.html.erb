@@ -1,0 +1,18 @@
+<div class="page-header">
+  <h1>Food Item #<%= @food_item.id %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Food item</dt>
+  <dd><%= @food_item.food_item %></dd>
+
+  <dt>Food category</dt>
+  <dd><%= @food_item.food_category_id %></dd>
+
+  <dt>Unit of measure</dt>
+  <dd><%= @food_item.unit_of_measure_id %></dd>
+
+  <dt>Average expiration days</dt>
+  <dd><%= @food_item.average_expiration_days %></dd>
+
+</dl>

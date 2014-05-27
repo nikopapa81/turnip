@@ -1,0 +1,30 @@
+<div class="page-header">
+  <h1>Edit Food Category #<%= @food_category.id %></h1>
+</div>
+
+<% if @food_category.errors.any? %>
+  <% @food_category.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<form action="/update_food_category/<%= @food_category.id %>" class="form-horizontal">
+  <!-- Label and input for food_category -->
+  <div class="form-group">
+    <label for="food_category" class="col-sm-2 control-label">
+      Food category
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="food_category" name="food_category" placeholder="Food category" class="form-control" value="<%= @food_category.food_category %>">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <input type="submit" value="Update Food Category" class="btn btn-primary">
+    </div>
+  </div>
+</form>

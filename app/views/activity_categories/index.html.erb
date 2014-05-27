@@ -1,0 +1,40 @@
+<div class="page-header">
+  <h1>Activity categories</h1>
+</div>
+
+<p><a href="/activity_categories/new" class="btn btn-primary">Add a New Activity Category</a></p>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Activity category</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @activity_categories.each do |activity_category| %>
+      <tr>
+        <td><%= activity_category.activity_category %></td>
+        <td>
+          <a href="/activity_categories/<%= activity_category.id %>" class="btn btn-primary">
+            <i class="fa fa-search-plus"></i>
+          </a>
+        </td>
+        <td>
+          <a href="/activity_categories/<%= activity_category.id %>/edit" class="btn btn-warning">
+            <i class="fa fa-edit"></i>
+          </a>
+        </td>
+        <td>
+          <a href="/delete_activity_category/<%= activity_category.id %>" class="btn btn-danger">
+            <i class="fa fa-trash-o"></i>
+          </a>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

@@ -1,0 +1,40 @@
+<div class="page-header">
+  <h1>Unit of measures</h1>
+</div>
+
+<p><a href="/unit_of_measures/new" class="btn btn-primary">Add a New Unit Of Measure</a></p>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Unit of measure</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @unit_of_measures.each do |unit_of_measure| %>
+      <tr>
+        <td><%= unit_of_measure.unit_of_measure %></td>
+        <td>
+          <a href="/unit_of_measures/<%= unit_of_measure.id %>" class="btn btn-primary">
+            <i class="fa fa-search-plus"></i>
+          </a>
+        </td>
+        <td>
+          <a href="/unit_of_measures/<%= unit_of_measure.id %>/edit" class="btn btn-warning">
+            <i class="fa fa-edit"></i>
+          </a>
+        </td>
+        <td>
+          <a href="/delete_unit_of_measure/<%= unit_of_measure.id %>" class="btn btn-danger">
+            <i class="fa fa-trash-o"></i>
+          </a>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

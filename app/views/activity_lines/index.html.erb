@@ -1,0 +1,56 @@
+<div class="page-header">
+  <h1>Activity lines</h1>
+</div>
+
+<p><a href="/activity_lines/new" class="btn btn-primary">Add a New Activity Line</a></p>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Food category</th>
+      <th>Food item</th>
+      <th>Unit of measure</th>
+      <th>Activity</th>
+      <th>Quantity</th>
+      <th>Cost of purchase</th>
+      <th>Source of purchase</th>
+      <th>Expiration date</th>
+      <th>Notes</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @activity_lines.each do |activity_line| %>
+      <tr>
+        <td><%= activity_line.food_category_id %></td>
+        <td><%= activity_line.food_item_id %></td>
+        <td><%= activity_line.unit_of_measure_id %></td>
+        <td><%= activity_line.activity_id %></td>
+        <td><%= activity_line.quantity %></td>
+        <td><%= activity_line.cost_of_purchase %></td>
+        <td><%= activity_line.source_of_purchase %></td>
+        <td><%= activity_line.expiration_date %></td>
+        <td><%= activity_line.notes %></td>
+        <td>
+          <a href="/activity_lines/<%= activity_line.id %>" class="btn btn-primary">
+            <i class="fa fa-search-plus"></i>
+          </a>
+        </td>
+        <td>
+          <a href="/activity_lines/<%= activity_line.id %>/edit" class="btn btn-warning">
+            <i class="fa fa-edit"></i>
+          </a>
+        </td>
+        <td>
+          <a href="/delete_activity_line/<%= activity_line.id %>" class="btn btn-danger">
+            <i class="fa fa-trash-o"></i>
+          </a>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

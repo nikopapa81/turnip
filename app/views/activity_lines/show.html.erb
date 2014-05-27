@@ -1,0 +1,33 @@
+<div class="page-header">
+  <h1>Activity Line #<%= @activity_line.id %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Food category</dt>
+  <dd><%= @activity_line.food_category_id %></dd>
+
+  <dt>Food item</dt>
+  <dd><%= @activity_line.food_item_id %></dd>
+
+  <dt>Unit of measure</dt>
+  <dd><%= @activity_line.unit_of_measure_id %></dd>
+
+  <dt>Activity</dt>
+  <dd><%= @activity_line.activity_id %></dd>
+
+  <dt>Quantity</dt>
+  <dd><%= @activity_line.quantity %></dd>
+
+  <dt>Cost of purchase</dt>
+  <dd><%= @activity_line.cost_of_purchase %></dd>
+
+  <dt>Source of purchase</dt>
+  <dd><%= @activity_line.source_of_purchase %></dd>
+
+  <dt>Expiration date</dt>
+  <dd><%= @activity_line.expiration_date %></dd>
+
+  <dt>Notes</dt>
+  <dd><%= @activity_line.notes %></dd>
+
+</dl>
