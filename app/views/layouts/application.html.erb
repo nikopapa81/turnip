@@ -4,7 +4,9 @@
   <meta charset="utf-8">
   <title>Turnip</title>
 
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/amelia/bootstrap.min.css">
+  <link rel="shortcut icon" href="/favicon.png" type="image/png">
+
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/superhero/bootstrap.min.css">
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
 
   <style>
@@ -40,19 +42,21 @@
       <ul class="nav navbar-nav">
         <li><a href="/food_categories">Food Categories</a></li>
         <li><a href="/food_items">Food Items</a></li>
-        <li><a href="/activity_lines"><i class="fa fa-book"></i>Activity</a></li>
-        <li><a href="/reports"><i class="fa fa-bar-chart-o"></i>Reports</a></li>
-        <li><a href="/recipes"><i class="fa fa-spoon"></i>Recipes</a></li>
+        <li><a href="/reports"><i class="fa fa-bar-chart-o"></i> Reports</a></li>
+        <li><a href="/recipes"><i class="fa fa-cutlery"></i> Recipes</a></li>
+        <li><a href="/activity_categories">Activity Categories</a></li>
+        <li><a href="/activity_lines"><i class="fa fa-book"></i> Activity Lines</a></li>
+        <li><a href="/unit_of_measures">Unit Of Measures</a></li>
         <li><a href="/about">About</a></li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
         <% if false %>
           <li><a href="/users/edit">Oscar the Grouch</a></li>
-          <li><a href="/users/sign_out" data-method="delete">Sign out</a></li>
+          <li><a href="/users/sign_out" data-method="delete"><i class="fa fa-sign-out"></i>Sign out</a></li>
         <% else %>
-          <li><a href="/users/sign_up">Sign up</a></li>
-          <li><a href="/users/sign_in">Sign in</a></li>
+          <li><a href="/users/sign_up"><i class="fa fa-user"></i> Sign up</a></li>
+          <li><a href="/users/sign_in"><i class="fa fa-sign-in"></i> Sign in</a></li>
         <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
