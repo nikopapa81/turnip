@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   get('/', { :controller => 'activity_lines', :action => 'home'})
   get('/about', { :controller => 'activity_lines', :action => 'about'})
   get('/reports', { :controller => 'activity_lines', :action => 'reports'})
