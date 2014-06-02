@@ -1,6 +1,6 @@
 class ActivityLinesController < ApplicationController
   def index
-    @activity_lines = ActivityLine.all
+    @activity_lines = current_user.activity_lines
   end
 
   def home
@@ -34,6 +34,7 @@ class ActivityLinesController < ApplicationController
     @activity_line.source_of_purchase = params[:source_of_purchase]
     @activity_line.expiration_date = params[:expiration_date]
     @activity_line.notes = params[:notes]
+    @activity_line.user_id = current_user.id
 
     if @activity_line.save
       redirect_to "/activity_lines", :notice => "Activity line created successfully."

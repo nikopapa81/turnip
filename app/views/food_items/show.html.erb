@@ -14,5 +14,21 @@
 
   <dt>Average expiration days</dt>
   <dd><%= @food_item.average_expiration_days %></dd>
-
 </dl>
+
+
+<h4>Item Transaction History</h4>
+<table class="table table-striped table-hover">
+  <% @food_item.activity_lines.each do |activity_line| %>
+    <tr>
+      <td>
+        <%= activity_line.activity_id %>
+      </td>
+      <td>
+        <%= activity_line.source_of_purchase %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
+

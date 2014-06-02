@@ -41,18 +41,18 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="/food_categories">Food Categories</a></li>
-        <li><a href="/food_items">Food Items</a></li>
+        <li><a href="/food_items"><i class="fa fa-lemon-o"></i> Food Items</a></li>
         <li><a href="/reports"><i class="fa fa-bar-chart-o"></i> Reports</a></li>
         <li><a href="/recipes"><i class="fa fa-cutlery"></i> Recipes</a></li>
         <li><a href="/activity_categories">Activity Categories</a></li>
         <li><a href="/activity_lines"><i class="fa fa-book"></i> Activity Lines</a></li>
         <li><a href="/unit_of_measures">Unit Of Measures</a></li>
-        <li><a href="/about">About</a></li>
+        <li><a href="/about"><i class="fa fa-question-circle"></i> About</a></li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        <% if false %>
-          <li><a href="/users/edit">Oscar the Grouch</a></li>
+        <% if current_user.present? %>
+          <li><a href="/users/edit"><%= current_user.email %></a></li>
           <li><a href="/users/sign_out" data-method="delete"><i class="fa fa-sign-out"></i>Sign out</a></li>
         <% else %>
           <li><a href="/users/sign_up"><i class="fa fa-user"></i> Sign up</a></li>
