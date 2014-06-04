@@ -1,0 +1,70 @@
+<div class="page-header">
+  <h1>Edit Purchase #<%= @purchase.id %></h1>
+</div>
+
+<% if @purchase.errors.any? %>
+  <% @purchase.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<form action="/update_purchase/<%= @purchase.id %>" class="form-horizontal">
+  <!-- Label and input for food_item_id -->
+  <div class="form-group">
+    <label for="food_item_id" class="col-sm-2 control-label">
+      Food item
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="food_item_id" name="food_item_id" placeholder="Food item" class="form-control" value="<%= @purchase.food_item_id %>">
+    </div>
+  </div>
+
+  <!-- Label and input for quantity -->
+  <div class="form-group">
+    <label for="quantity" class="col-sm-2 control-label">
+      Quantity
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="quantity" name="quantity" placeholder="Quantity" class="form-control" value="<%= @purchase.quantity %>">
+    </div>
+  </div>
+
+  <!-- Label and input for cost -->
+  <div class="form-group">
+    <label for="cost" class="col-sm-2 control-label">
+      Cost
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="cost" name="cost" placeholder="Cost" class="form-control" value="<%= @purchase.cost %>">
+    </div>
+  </div>
+
+  <!-- Label and input for source -->
+  <div class="form-group">
+    <label for="source" class="col-sm-2 control-label">
+      Source
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="source" name="source" placeholder="Source" class="form-control" value="<%= @purchase.source %>">
+    </div>
+  </div>
+
+  <!-- Label and input for expiration_date -->
+  <div class="form-group">
+    <label for="expiration_date" class="col-sm-2 control-label">
+      Expiration date
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="expiration_date" name="expiration_date" placeholder="Expiration date" class="form-control" value="<%= @purchase.expiration_date %>">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <input type="submit" value="Update Purchase" class="btn btn-primary">
+    </div>
+  </div>
+</form>

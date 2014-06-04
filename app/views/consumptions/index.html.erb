@@ -1,0 +1,44 @@
+<div class="page-header">
+  <h1>Consumptions</h1>
+</div>
+
+<p><a href="/consumptions/new" class="btn btn-primary">Add a New Consumption</a></p>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Food item</th>
+      <th>Quantity</th>
+      <th>Waste</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @consumptions.each do |consumption| %>
+      <tr>
+        <td><%= consumption.food_item_id %></td>
+        <td><%= consumption.quantity %></td>
+        <td><%= consumption.waste %></td>
+        <td>
+          <a href="/consumptions/<%= consumption.id %>" class="btn btn-primary">
+            <i class="fa fa-search-plus"></i>
+          </a>
+        </td>
+        <td>
+          <a href="/consumptions/<%= consumption.id %>/edit" class="btn btn-warning">
+            <i class="fa fa-edit"></i>
+          </a>
+        </td>
+        <td>
+          <a href="/delete_consumption/<%= consumption.id %>" class="btn btn-danger">
+            <i class="fa fa-trash-o"></i>
+          </a>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

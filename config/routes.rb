@@ -1,5 +1,39 @@
 Rails.application.routes.draw do
 
+  # Routes for the Consumption resource:
+  # CREATE
+  get('/consumptions/new', { :controller => 'consumptions', :action => 'new' })
+  get('/create_consumption', { :controller => 'consumptions', :action => 'create' })
+
+  # READ
+  get('/consumptions', { :controller => 'consumptions', :action => 'index' })
+  get('/consumptions/:id', { :controller => 'consumptions', :action => 'show' })
+
+  # UPDATE
+  get('/consumptions/:id/edit', { :controller => 'consumptions', :action => 'edit' })
+  get('/update_consumption/:id', { :controller => 'consumptions', :action => 'update' })
+
+  # DELETE
+  get('/delete_consumption/:id', { :controller => 'consumptions', :action => 'destroy' })
+  #------------------------------
+
+  # Routes for the Purchase resource:
+  # CREATE
+  get('/purchases/new', { :controller => 'purchases', :action => 'new' })
+  get('/create_purchase', { :controller => 'purchases', :action => 'create' })
+
+  # READ
+  get('/purchases', { :controller => 'purchases', :action => 'index' })
+  get('/purchases/:id', { :controller => 'purchases', :action => 'show' })
+
+  # UPDATE
+  get('/purchases/:id/edit', { :controller => 'purchases', :action => 'edit' })
+  get('/update_purchase/:id', { :controller => 'purchases', :action => 'update' })
+
+  # DELETE
+  get('/delete_purchase/:id', { :controller => 'purchases', :action => 'destroy' })
+  #------------------------------
+
   devise_for :users
   get('/', { :controller => 'activity_lines', :action => 'home'})
   get('/about', { :controller => 'activity_lines', :action => 'about'})

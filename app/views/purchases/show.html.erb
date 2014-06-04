@@ -1,0 +1,21 @@
+<div class="page-header">
+  <h1>Purchase #<%= @purchase.id %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Food item</dt>
+  <dd><%= @purchase.food_item_id %></dd>
+
+  <dt>Quantity</dt>
+  <dd><%= @purchase.quantity %></dd>
+
+  <dt>Cost</dt>
+  <dd><%= @purchase.cost %></dd>
+
+  <dt>Source</dt>
+  <dd><%= @purchase.source %></dd>
+
+  <dt>Expiration date</dt>
+  <dd><%= @purchase.expiration_date %></dd>
+
+</dl>
